@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410e67a7ffaa19a47b322b4fe828db7e, type: 3}
+  m_Name: SoundBank
+  m_EditorClassIdentifier: Assembly-CSharp::RicochetBerlin.SoundBank
+  tankShot:
+  - {fileID: 8300000, guid: c39430b7818f39349875ba227f6f4797, type: 3}
+  - {fileID: 8300000, guid: 091371d177e957b458b31f41335137c2, type: 3}
+  ricochet:
+  - {fileID: 8300000, guid: c233a47fd1a00924e8123c95730e724a, type: 3}
+  - {fileID: 8300000, guid: 55b5ad368954f5e43babf3da46cd71c6, type: 3}
+  - {fileID: 8300000, guid: 4d268fccccb92c3468fa466f6f3e6f4f, type: 3}
+  wallImpact:
+  - {fileID: 8300000, guid: 0794fc867a67e044295ae94874ad9da8, type: 3}
+  - {fileID: 8300000, guid: 9423e717b2bf7db449b59ce6f7c5dbec, type: 3}
+  unitHit:
+  - {fileID: 8300000, guid: ad2a97758689e1742832d9409dcf1461, type: 3}
+  - {fileID: 8300000, guid: 4d6a50772496494449f82737aefcf679, type: 3}
+  explosion:
+  - {fileID: 8300000, guid: a5d6ddcf0b759d24e8bb6b42e092d2d2, type: 3}
+  - {fileID: 8300000, guid: ba43286f1d4ae0e4589cbaa94a78852f, type: 3}
+  - {fileID: 8300000, guid: c976b891315a8ec409403efe7403d299, type: 3}
+  playerHit:
+  - {fileID: 8300000, guid: bd96b4055c2038542a021de6354afb4c, type: 3}
+  - {fileID: 8300000, guid: 3abdfd2be7fa10a46b8cd32edd7d6992, type: 3}
+  armorHit:
+  - {fileID: 8300000, guid: c53d81c1a95003647952c4562bf738fa, type: 3}
+  - {fileID: 8300000, guid: d6cb0bbdcb3222148a2613a5766abdda, type: 3}
+  droneShot:
+  - {fileID: 8300000, guid: 15a65c877ceba0e4cbde46a0b873045d, type: 3}
+  hatchOpen:
+  - {fileID: 8300000, guid: b50dbc6a6fbe45840ace3a39f4f5cd07, type: 3}
+  arming:
+  - {fileID: 8300000, guid: 1f3e0988c7bcfe141a1657859b7531e2, type: 3}
+  nitro:
+  - {fileID: 8300000, guid: 6079189d7ca657046908a1734b398ee2, type: 3}
+  radioBeep:
+  - {fileID: 8300000, guid: a169bd2c0676e4f47a4bfa9f507fc502, type: 3}
+  flagPickup:
+  - {fileID: 8300000, guid: d9fb76e0334b985438589306f1e610fb, type: 3}
+  alarm:
+  - {fileID: 8300000, guid: 708b1a483da699043ba1ff7cdadd7044, type: 3}
+  win:
+  - {fileID: 8300000, guid: e397c94a8b121a34caafbfb18bee127d, type: 3}
+  lose:
+  - {fileID: 8300000, guid: ca1157cf1f80e0b46b6c7a72f77eae4d, type: 3}
+  uiClick:
+  - {fileID: 8300000, guid: 64808f9ed7e2cd54d948e195670ae595, type: 3}
+  repair:
+  - {fileID: 8300000, guid: efa502fe392879543b50529fed3b4e59, type: 3}
+  powerup:
+  - {fileID: 8300000, guid: 942f160232c39bb44b16f58e9abc1376, type: 3}
+  threatSense:
+  - {fileID: 8300000, guid: 01e39f44557795e49acf7ef5cf59bf07, type: 3}
+  abilitySmoke:
+  - {fileID: 8300000, guid: ba43286f1d4ae0e4589cbaa94a78852f, type: 3}
+  abilityArmor:
+  - {fileID: 8300000, guid: 9a3c142bc6d9bb84587129a3bc1401c7, type: 3}
+  reloaded:
+  - {fileID: 8300000, guid: 4d268fccccb92c3468fa466f6f3e6f4f, type: 3}
+  engineLoop: {fileID: 8300000, guid: 9d4ee4e59bfd1db4990353163fafc9f0, type: 3}
+  droneLoop: {fileID: 8300000, guid: b2207651409784549b43a31a3f66d4ed, type: 3}

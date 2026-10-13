@@ -1,0 +1,137 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="GameUI.uss" />
+    <ui:VisualElement name="root" class="root" picking-mode="Ignore">
+        <ui:VisualElement name="damage-vignette" class="vignette" picking-mode="Ignore" />
+
+        <!-- ===================================================== HUD -->
+        <ui:VisualElement name="hud" class="hud" picking-mode="Ignore">
+            <!-- top: only the boss bar, the view stays clear -->
+            <ui:VisualElement class="hud-top" picking-mode="Ignore">
+                <ui:VisualElement name="boss" class="boss" picking-mode="Ignore">
+                    <ui:Label name="boss-caption" text="ВЕРТОЛЁТ" class="caption boss-caption" picking-mode="Ignore" />
+                    <ui:VisualElement class="bar wide" picking-mode="Ignore">
+                        <ui:VisualElement name="boss-fill" class="bar-fill boss-fill" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- bottom bar, CS style: armour left, objective centre, ammo right -->
+            <ui:VisualElement class="hud-bottom" picking-mode="Ignore">
+                <ui:VisualElement class="hud-left" picking-mode="Ignore">
+                    <ui:VisualElement name="mods" class="mods" picking-mode="Ignore">
+                        <ui:Label name="mod-shield" text="МАНГАЛ" class="mod mod-shield" picking-mode="Ignore" />
+                        <ui:Label name="mod-allies" text="ДРОНЫ-ПОМОЩНИКИ" class="mod mod-allies" picking-mode="Ignore" />
+                        <ui:Label name="mod-twin" text="СПАРКА" class="mod mod-twin" picking-mode="Ignore" />
+                        <ui:Label name="mod-track" text="ГУСЕНИЦА" class="mod mod-track" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="cs-block" picking-mode="Ignore">
+                        <ui:Label name="armor-value" text="100" class="cs-number" picking-mode="Ignore" />
+                        <ui:VisualElement class="cs-bar" picking-mode="Ignore">
+                            <ui:VisualElement name="armor-fill" class="bar-fill armor-fill" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="hud-center" picking-mode="Ignore">
+                    <ui:Label name="objective" text="НАЙДИ ФЛАГ" class="objective-text" picking-mode="Ignore" />
+                    <ui:VisualElement class="center-row" picking-mode="Ignore">
+                        <ui:Label name="timer" text="0:00" class="timer" picking-mode="Ignore" />
+                        <ui:Label name="signal-caption" text="РАДИОМАЯК" class="caption inline" picking-mode="Ignore" />
+                        <ui:VisualElement name="signal-bars" class="signal-bars" picking-mode="Ignore">
+                            <ui:VisualElement class="signal-bar b1" picking-mode="Ignore" />
+                            <ui:VisualElement class="signal-bar b2" picking-mode="Ignore" />
+                            <ui:VisualElement class="signal-bar b3" picking-mode="Ignore" />
+                            <ui:VisualElement class="signal-bar b4" picking-mode="Ignore" />
+                            <ui:VisualElement class="signal-bar b5" picking-mode="Ignore" />
+                            <ui:VisualElement class="signal-bar b6" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                        <ui:Label name="kills" text="СБИТО 0" class="kills" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="hud-right" picking-mode="Ignore">
+                    <ui:VisualElement class="cs-block nitro-block" picking-mode="Ignore">
+                        <ui:Label name="nitro-caption" text="НИТРО - SHIFT" class="caption inline" picking-mode="Ignore" />
+                        <ui:VisualElement class="cs-bar small" picking-mode="Ignore">
+                            <ui:VisualElement name="nitro-fill" class="bar-fill nitro-fill" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="cs-block" picking-mode="Ignore">
+                        <ui:Label name="shells-count" text="5 / 5" class="cs-number" picking-mode="Ignore" />
+                        <ui:Label name="shells" text="●●●●●" class="shells-text" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="extract" class="extract" picking-mode="Ignore">
+                <ui:Label name="extract-caption" text="ЭВАКУАЦИЯ" class="caption" picking-mode="Ignore" />
+                <ui:VisualElement class="bar wide" picking-mode="Ignore">
+                    <ui:VisualElement name="extract-fill" class="bar-fill extract-fill" picking-mode="Ignore" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="alert-row" picking-mode="Ignore">
+                <ui:Label name="alert" text="" class="alert" picking-mode="Ignore" />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="evac-arrow" class="evac-arrow" picking-mode="Ignore">
+                <ui:VisualElement class="evac-arrow-head" picking-mode="Ignore" />
+                <ui:Label name="evac-distance" text="0 м" class="evac-distance" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ===================================================== MAIN MENU -->
+        <ui:VisualElement name="menu" class="screen menu">
+            <ui:VisualElement class="menu-main">
+                <ui:Label text="ШТУРМ" class="title" />
+                <ui:VisualElement class="hazard" picking-mode="Ignore" />
+                <ui:VisualElement name="tank-cards" class="tank-cards" />
+                <ui:VisualElement class="menu-row">
+                    <ui:VisualElement name="color-swatches" class="swatches" />
+                    <ui:VisualElement name="difficulty" class="difficulty" />
+                </ui:VisualElement>
+                <ui:VisualElement class="menu-buttons">
+                    <ui:Button name="play" text="В БОЙ" class="btn primary" />
+                    <ui:Button name="open-tutorial" text="ОБУЧЕНИЕ" class="btn small tut-open" />
+                    <ui:Button name="quit" text="ВЫХОД" class="btn small" />
+                </ui:VisualElement>
+                <ui:Label name="best" text="" class="best" />
+            </ui:VisualElement>
+
+            <!-- studio mark, bottom-right corner -->
+            <ui:VisualElement class="studio" picking-mode="Ignore">
+                <ui:VisualElement class="studio-logo" picking-mode="Ignore" />
+                <ui:Label text="ФПИ" class="studio-name" picking-mode="Ignore" />
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+
+        <!-- ===================================================== PAUSE -->
+        <ui:VisualElement name="pause" class="screen overlay">
+            <ui:VisualElement class="card">
+                <ui:VisualElement class="hazard" picking-mode="Ignore" />
+                <ui:Label text="ПАУЗА" class="card-title" />
+                <ui:Button name="resume" text="ДАЛЬШЕ" class="btn primary" />
+                <ui:Button name="pause-restart" text="ЗАНОВО" class="btn" />
+                <ui:Button name="pause-menu" text="МЕНЮ" class="btn" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ===================================================== END -->
+        <ui:VisualElement name="end" class="screen overlay">
+            <ui:VisualElement class="card">
+                <ui:VisualElement class="hazard" picking-mode="Ignore" />
+                <ui:Label name="end-title" text="ПОБЕДА" class="card-title" />
+                <ui:Label name="end-subtitle" text="" class="card-subtitle" />
+                <ui:VisualElement class="stats">
+                    <ui:VisualElement class="stat"><ui:Label text="ВРЕМЯ" class="caption" /><ui:Label name="stat-time" text="0:00" class="stat-value" /></ui:VisualElement>
+                    <ui:VisualElement class="stat"><ui:Label text="ДРОНОВ" class="caption" /><ui:Label name="stat-kills" text="0" class="stat-value" /></ui:VisualElement>
+                    <ui:VisualElement class="stat"><ui:Label text="РИКОШЕТОМ" class="caption" /><ui:Label name="stat-ricochet" text="0" class="stat-value" /></ui:VisualElement>
+                    <ui:VisualElement class="stat"><ui:Label text="РЕКОРД" class="caption" /><ui:Label name="stat-best" text="-" class="stat-value" /></ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Button name="end-restart" text="ЕЩЁ РАЗ" class="btn primary" />
+                <ui:Button name="end-menu" text="МЕНЮ" class="btn" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

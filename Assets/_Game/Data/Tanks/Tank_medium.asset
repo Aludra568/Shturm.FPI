@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b7548a509e6414fb8ba98c0927b636, type: 3}
+  m_Name: Tank_medium
+  m_EditorClassIdentifier: Assembly-CSharp::RicochetBerlin.TankClass
+  displayName: "\u0412\u041E\u041B\u041A"
+  description: "\u0421\u0431\u0430\u043B\u0430\u043D\u0441\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439"
+  maxHealth: 75
+  moveSpeed: 2.4
+  turnSpeed: 120
+  fireCooldown: 0.7
+  shellDamage: 2
+  colliderSize: {x: 0.68, y: 0.92}
+  ability: 1
+  preview: {fileID: 2800000, guid: 329e4b9d908d192408cf9d7c4c820742, type: 3}
+  defaultColorIndex: 0
+  speedRating: 2
+  armorRating: 2
+  fireRating: 2
+  hull: {fileID: 21300000, guid: 02684ff1879c2f348a72898334d89aaa, type: 3}
+  track: {fileID: 21300000, guid: d8bd58d8363d71b459d5a38933244ad3, type: 3}
+  turret: {fileID: 21300000, guid: cf3a3e79b63315c40bc41ef3f7fb45d0, type: 3}
+  barrel: {fileID: 21300000, guid: 6c3e6bd633b465c44ba44d18aac7e636, type: 3}
+  twinBarrel: {fileID: 21300000, guid: 4cb46603269622d4dbb49260fc2ddc86, type: 3}
+  damage: {fileID: 21300000, guid: 239550bce291fb642b7f942eff7bb4cb, type: 3}
+  trackDebris: {fileID: 21300000, guid: a8a0815810bf2634ea8b813f18723a02, type: 3}
+  trackOffset: 0.25
+  barrelOffset: 0.33
+  muzzleDistance: 0.58
